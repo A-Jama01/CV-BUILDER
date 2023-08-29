@@ -1,4 +1,5 @@
 import React from 'react'
+import GeneralInfo from './components/GeneralInfo'
 
 
 function App() {
@@ -6,7 +7,7 @@ function App() {
 
   return (
     <>
-      
+      <GeneralInfo />
     </>
   )
 }

@@ -1,0 +1,19 @@
+.general-info-display {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family:  'STIX Two Text', serif;
+    text-align: center;
+    margin-top: 39;
+}
+
+.general-info-display:hover .edit-button {
+    opacity: 1;
+}
+
+.name {
+    font-size: 25pt;
+    font-weight: bold;
+    margin: 0; 
+    border-bottom: 2px solid black;
+}

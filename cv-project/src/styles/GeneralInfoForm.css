@@ -1,0 +1,9 @@
+.general-info-form-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.general-info-form {
+    display: flex;
+    flex-direction: column;
+}

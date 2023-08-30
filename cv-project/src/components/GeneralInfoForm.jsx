@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../styles/GeneralInfoForm.css'
 
 function GeneralInfoForm({ generalInfo, onInput, onSubmit }) {
 
@@ -13,7 +14,7 @@ function GeneralInfoForm({ generalInfo, onInput, onSubmit }) {
     }
 
     function handlePhoneInput(input) {
-        const newGeneralInfo = { ...generalInfo, phoneNumber: parseInt(input) };
+        const newGeneralInfo = { ...generalInfo, phoneNumber: input };
         onInput(newGeneralInfo);
     }
 
@@ -23,35 +24,39 @@ function GeneralInfoForm({ generalInfo, onInput, onSubmit }) {
     }
 
     return (
-        <>
+        <div className="general-info-form-section">
+            <div className="form-title">General Information</div>
             <form className="general-info-form">
                 <label>
-                    Name:
+                    Name
                 </label>
                 <input
                     type="text"
+                    placeholder="Enter your name"
                     value={generalInfo.name}
                     onChange={(event) => handleNameInput(event.target.value)}
                 />
                 <label>
-                    Email:
+                    Email
                 </label>
                 <input
                     type="text"
+                    placeholder="Enter your email"
                     value={generalInfo.email}
                     onChange={(event) => handleEmailInput(event.target.value)}
                 />
                 <label>
-                    Phone Number:
+                    Phone Number
                 </label>
                 <input
-                    type="number"
+                    type="text"
+                    placeholder="Enter your number"
                     value={generalInfo.phoneNumber}
                     onChange={(event) => handlePhoneInput(event.target.value)}
                 />
-                <button onClick={handleSubmit}>Submit</button>
+                <button className="submit-button" onClick={handleSubmit}>Submit</button>
             </form>
-        </>
+        </div>
     )
 }
 

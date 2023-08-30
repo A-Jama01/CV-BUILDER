@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.cv-container {
+    background-color: white;
+    border-radius: 0px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 80%;
+    max-width: 800px;
+    min-height: 11in;
+    overflow-y: auto;
+}
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #e7e7e7;
+    border-radius: 4px;
+    color:  black;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button {
+    background-color: #009cd9;
+    color: white;
+    align-self: flex-end;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+label {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.form-title {
+    margin-bottom: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    border-bottom: 6px solid lightgray;
+}
+
+.edit-button {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    align-self: flex-end;
+}
+
+.edit-button button{
+    font-size: 10pt;
+    padding: 4px 8px;
+}
+
+
+.edit-button button:hover {
+    background-color: gray;
+}

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import GeneralInfoDisplay from './GeneralInfoDisplay';
 import GeneralInfoForm from './GeneralInfoForm';
+import '../styles/GeneralInfo.css'
 
 function GeneralInfo() {
     const [generalInfo, setGeneralInfo] = useState({ name: "", email: "",  phoneNumber: "" });
@@ -16,7 +17,6 @@ function GeneralInfo() {
     
     return (
         <>
-            <h3>General Info</h3>
             {editing ? (
                 <GeneralInfoDisplay generalInfo={generalInfo} onEdit={handleEdit} />
             ) : (

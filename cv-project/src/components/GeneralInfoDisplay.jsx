@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/GeneralInfoDisplay.css';
 
 function GeneralInfoDisplay({ generalInfo, onEdit }) {
     if (!generalInfo) {
@@ -10,14 +11,14 @@ function GeneralInfoDisplay({ generalInfo, onEdit }) {
     }
 
     return (
-        <>
-            <div className="general-info-display">
-                <p>{generalInfo.name}</p> 
-                <p>{generalInfo.email}</p>
-                <p>{generalInfo.phoneNumber}</p>   
-                <button className="edit-button" onClick={handleEdit}>Edit</button>
-            </div>
-        </>
+        <div className="general-info-display">
+            <div className='name'>{generalInfo.name}</div> 
+            <div className='email'>{generalInfo.email}</div>
+            <div className='phone-number'>{generalInfo.phoneNumber}</div>  
+            <div className="edit-button">
+                <button onClick={handleEdit}>Edit</button>
+            </div> 
+        </div>
     )
 }
 export default GeneralInfoDisplay;

@@ -13,10 +13,9 @@ function EducationForm ({ education, onSubmit, onInput }) {
     
     return (
         <div className='education-form-section'>
-            <div className='form-title'>Education</div>
             <form className='education-form'>
                 <label>School</label>
-                <input type="text" value={education.school} onChange={event => {handleInputChange(event, 'school')}}></input>
+                <input type="text" value={education.schoolName} onChange={event => {handleInputChange(event, 'schoolName')}}></input>
                 <label>Degree</label>
                 <input type="text" value={education.degree} onChange={event => {handleInputChange(event, 'degree')}}></input>
                 <label >City</label>

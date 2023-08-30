@@ -4,11 +4,12 @@ import EducationDisplay from './EducationDisplay';
 import { v4 as uuidv4 } from 'uuid';
 
 function Education () {
+    const [isHovered, setIsHovered] = useState(false);
     const [educationList, setEducationList] = useState([{
         id: uuidv4(),
-        editing: true,
-        school: "Harvard",
-        degree: "Computer Science",
+        editing: false,
+        schoolName: "Harvard College",
+        degree: "Bachelor of Science in Computer Science",
         city: "Cambridge",
         country: "United States of America",
         startDate: "01/01/1989",
@@ -49,23 +50,29 @@ function Education () {
             startDate: "",
             endDate: "",
         }
-        addEducation(newEducation);
+        addEducation(newEducation);  
     }
 
+    function handleMouseEnter() {
+        setIsHovered(true);
+    }
+
+    function handleMouseLeave() {
+        setIsHovered(false);
+    }
+    
     return (
-        <>
+        <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}> 
+            <div className="section-title">EDUCATION</div>
             {educationList.map((education) => 
                 education.editing ? (
                     <EducationForm key={education.id} education={education} onSubmit={onSubmit} onInput={handleInput} /> 
                 ) : (
-                    <div key={education.id}>
-                        <div>Education</div>
-                        <EducationDisplay education={education} onRemove={removeEducation} onEdit={onSubmit} />
-                    </div>
+                    <EducationDisplay key={education.id} education={education} onRemove={removeEducation} onEdit={onSubmit} />
                 )
-                )}
-            <button className='add-button' onClick={newEducation}>Add</button>
-        </>
+            )}
+            {isHovered && <button className='add-button' onClick={newEducation}>Add</button>}
+        </div>
     )
 }
 

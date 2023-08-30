@@ -4,7 +4,7 @@ import GeneralInfoForm from './GeneralInfoForm';
 import '../styles/GeneralInfo.css'
 
 function GeneralInfo() {
-    const [generalInfo, setGeneralInfo] = useState({ name: "", email: "",  phoneNumber: "" });
+    const [generalInfo, setGeneralInfo] = useState({ name: "Richard Williams", email: "RichardWilliams@gmail.com",  phoneNumber: "(770)-625-9669" });
     const [editing, setEditing] = useState(false);
     
     function handleInput(input) {
@@ -18,9 +18,9 @@ function GeneralInfo() {
     return (
         <>
             {editing ? (
-                <GeneralInfoDisplay generalInfo={generalInfo} onEdit={handleEdit} />
-            ) : (
                 <GeneralInfoForm generalInfo={generalInfo} onInput={handleInput} onSubmit={handleEdit} />
+            ) : (
+                <GeneralInfoDisplay generalInfo={generalInfo} onEdit={handleEdit} />              
             )}
         </>
     )

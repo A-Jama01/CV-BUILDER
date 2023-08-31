@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
-function EducationDisplay ({ education, onRemove, onEdit }) {
+function EducationDisplay({ education, onRemove, onEdit }) {
     const [isHovered, setIsHovered] = useState(false);
     const [showButtons, setShowButtons] = useState(false);
 
@@ -18,7 +18,7 @@ function EducationDisplay ({ education, onRemove, onEdit }) {
         return () => clearTimeout(timeout);
     }, [isHovered]);
 
-    function removeEducation () {
+    function removeEducation() {
         onRemove(education.id);
     }
 
@@ -37,7 +37,7 @@ function EducationDisplay ({ education, onRemove, onEdit }) {
     return (
         <div className='section-container' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <div className='first-line'>
-                <div>{education && education.schoolName ? education.schoolName.toUpperCase() : ""}</div>
+                <div><b>{education && education.schoolName ? education.schoolName.toUpperCase() : ""}</b></div>
                 <div>{education.city}, {education.country}</div>
             </div>
             <div className='first-line'>

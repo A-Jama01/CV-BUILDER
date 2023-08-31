@@ -114,3 +114,23 @@ button:hover {
 .remove-button:hover {
     background-color: red;
 }
+
+.description-area {
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 100px;
+}
+
+.description-display {
+    margin-top: 16px;
+}
+
+.experience-section-container {
+    margin-top: 32px;
+}
+
+.experience-form {
+    display: flex;
+    flex-direction: column;
+}

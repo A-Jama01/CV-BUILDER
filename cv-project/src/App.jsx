@@ -1,6 +1,7 @@
 import React from 'react'
 import GeneralInfo from './components/GeneralInfo'
 import Education from './components/Education'
+import ProfessionalExperience from './components/ProfessionalExperience'
 import './styles/App.css'
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <div className="cv-container">
         <GeneralInfo />
         <Education />
+        <ProfessionalExperience />
       </div>
     </div>
   )

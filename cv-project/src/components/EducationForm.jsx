@@ -1,7 +1,7 @@
 import React from 'react'
 
-function EducationForm ({ education, onSubmit, onInput }) {
-    function handleSubmit (event) {
+function EducationForm({ education, onSubmit, onInput }) {
+    function handleSubmit(event) {
         event.preventDefault();
         onSubmit(education.id)
     }
@@ -13,7 +13,7 @@ function EducationForm ({ education, onSubmit, onInput }) {
     
     return (
         <div className='education-form-section'>
-            <form className='education-form'>
+            <form className='experience-form'>
                 <label>School</label>
                 <input type="text" value={education.schoolName} onChange={event => {handleInputChange(event, 'schoolName')}}></input>
                 <label>Degree</label>

@@ -3,7 +3,7 @@ import EducationForm from './EducationForm';
 import EducationDisplay from './EducationDisplay';
 import { v4 as uuidv4 } from 'uuid';
 
-function Education () {
+function Education() {
     const [isHovered, setIsHovered] = useState(false);
     const [educationList, setEducationList] = useState([{
         id: uuidv4(),
@@ -16,15 +16,15 @@ function Education () {
         endDate: "01/01/1993",
     },]);
 
-    function addEducation (education) {
+    function addEducation(education) {
         setEducationList(prevEducation => [...prevEducation, education]);
     }
 
-    function removeEducation (id) {
+    function removeEducation(id) {
         setEducationList(prevEducation => prevEducation.filter(education => education.id != id));
     }
 
-    function handleInput (id, updatedValue) {
+    function handleInput(id, updatedValue) {
         setEducationList(prevEducation => prevEducation.map(education =>
             education.id == id ? {...education, ...updatedValue } : education));
     }
@@ -39,7 +39,7 @@ function Education () {
             education.id == id ? {...education, editing: true} : education));
     }
 
-    function newEducation () {
+    function newEducation() {
         const newEducation = {
             id: uuidv4(),
             editing: true,
